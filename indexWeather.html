@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styleWeather.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Weather Dashboard</h1>
+        </div>
+        
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="searchBtn">Get Weather</button>
+            <button id="locationBtn" class="location-btn" title="Get current location weather">
+                📍
+            </button>
+        </div>
+        
+        <div id="weatherAlert" class="weather-alert" style="display: none;">
+            <!-- Weather alerts will appear here -->
+        </div>
+        
+        <div id="weatherResult" class="weather-result">
+            <!-- Weather info will appear here -->
+        </div>
+        
+        <div class="auto-refresh-info">
+            <span id="refreshStatus">Auto-refresh: 30s</span>
+        </div>
+    </div>
+    
+    <!-- Weather Animation Elements -->
+    <div id="weatherAnimation" class="weather-animation">
+        <div class="rain-container" id="rainContainer"></div>
+        <div class="snow-container" id="snowContainer"></div>
+        <div class="cloud-container" id="cloudContainer"></div>
+    </div>
+    
+    <script src="scriptWeather.js"></script>
+</body>
+</html> 

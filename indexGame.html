@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styleGame.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <form id="player-form" class="player-form">
+            <select id="game-mode" required>
+                <option value="2p">2 Players</option>
+                <option value="ai">Play vs AI</option>
+            </select>
+            <select id="board-size" required>
+                <option value="3">3 x 3</option>
+                <option value="4">4 x 4</option>
+                <option value="5">5 x 5</option>
+            </select>
+            <input type="text" id="player-x" placeholder="Player X Name" required maxlength="12">
+            <input type="text" id="player-o" placeholder="Player O Name" required maxlength="12">
+            <button type="submit" id="start-btn">Start Game</button>
+        </form>
+        <audio id="start-sound" src="start.mp3" preload="auto"></audio>
+        <audio id="move-sound" src="move.mp3" preload="auto"></audio>
+        <audio id="win-sound" src="win.mp3" preload="auto"></audio>
+        <audio id="draw-sound" src="draw.mp3" preload="auto"></audio>
+        <canvas id="confetti-canvas" style="position:absolute; top:0; left:0; width:100vw; height:100vh; pointer-events:none; z-index:100;"></canvas>
+        <div id="game-board" class="board" style="display:none;"></div>
+        <div id="status" class="status"></div>
+        <button id="reset-btn" style="display:none;">Restart</button>
+        <button id="replay-btn" style="display:none;">Replay</button>
+    </div>
+    <div class="watermark">© 2025 Sahil Verma. All rights reserved.</div>
+    <script src="scriptGame.js"></script>
+</body>
+</html> 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="stylesToDo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-bg">
+    <div class="app-card">
+      <header class="app-header">
+        <span class="app-icon">✨</span>
+        <div>
+          <h1>Todo App</h1>
+          <p class="subtitle">Stay organized and boost your productivity</p>
+        </div>
+      </header>
+      <form id="todo-form" autocomplete="off" class="todo-form">
+        <input type="text" id="todo-input" placeholder="What needs to be done?" required />
+        <button type="submit" id="add-btn">+</button>
+      </form>
+      <div class="stats-bar">
+        <div><span class="stats-label">TOTAL:</span> <span id="stats-total">0</span></div>
+        <div><span class="stats-label">ACTIVE:</span> <span id="stats-active">0</span></div>
+        <div><span class="stats-label">COMPLETED:</span> <span id="stats-completed">0</span></div>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      <input type="text" id="search-input" class="search-input" placeholder="Search tasks..." autocomplete="off" />
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        <span class="progress-bar-text" id="progress-bar-text">0%</span>
+      </div>
+      <div id="todo-list" class="todo-list"></div>
+    </div>
+    <footer class="footer">
+      © 2025 Sahil Verma. All rights reserved.
+    </footer>
+  </div>
+  <script src="scriptToDo.js"></script>
+</body>
+</html> 
